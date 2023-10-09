@@ -1,0 +1,29 @@
+Você possui um analisador de metas que pode interpretar uma string command. O commandconsiste em um alfabeto de "G"e "()"/ou "(al)"em alguma ordem. O analisador de metas interpretará "G"como string "G", "()"como string "o"e "(al)"como string "al". As strings interpretadas são então concatenadas na ordem original.
+
+Dada a string command, retorne a interpretação decommand .
+
+ 
+
+Exemplo 1:
+
+Entrada: comando = "G()(al)"
+ Saída: "Meta"
+ Explicação:  O Analisador de Meta interpreta o comando da seguinte forma:
+G -> G
+() -> o
+(al) -> al
+O resultado final concatenado é "Goal".
+Exemplo 2:
+
+Entrada: comando = "G()()()()(al)"
+ Saída: "Gooooal"
+Exemplo 3:
+
+Entrada: comando = "(al)G(al)()()G"
+ Saída: "alGalooG"
+ 
+
+Restrições:
+
+1 <= command.length <= 100
+commandconsiste em "G", "()"e/ou "(al)"em alguma ordem.
